@@ -8,6 +8,8 @@ import HookUseState from './components/pages/HookUseState.jsx'
 import Exercices from './components/pages/Exercices.jsx'
 import Formulaire from './components/pages/Formulaire.jsx'
 import Flux from './components/pages/Flux.jsx'
+import HookUseEffect from './components/pages/HookUseEffect.jsx'
+import HookUseMemo from './components/pages/HookUseMemo.jsx'
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
           <Route path="/exercices" element={<Exercices/>}/>
           <Route path="/formulaire" element={<Formulaire/>}/>
           <Route path="/flux" element={<Flux/>}/>
+          <Route path="/use-effect" element={<HookUseEffect/>}/>
+          <Route path="/use-memo" element={<HookUseMemo/>}/>
         </Routes>
       </Router>
     </div>   

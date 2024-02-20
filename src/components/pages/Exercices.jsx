@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 /* eslint-disable react/prop-types */
 function Exercices () {
 
@@ -12,7 +14,15 @@ function Exercices () {
 
     const fruits = products.filter( product => product.category === 'Fruits')
     const legumes = products.filter( product => product.category === 'Vegetables')
+
+    const [afficherHorsStock, setAfficherHorsStock] = useState(true)
+
+    const [search, setSearch] = useState("")
+
+    const handleCheckBox = () => setAfficherHorsStock(!afficherHorsStock)
     
+    const handleSearch = (e) => setSearch(e.target.value)
+
     return(
         <>
             <h1>Exercices</h1>
@@ -46,13 +56,32 @@ function Exercices () {
                 `}
             </pre>
 
-
             <h2>Correction</h2>        
 
             <div className="border-b mb-5">
                 <h2>Exemple 1</h2>
-                <Fruit products={products}/>
-                <Legume products={products}/>
+                <label>Afficher hors stock</label>
+
+                <div className="flex">
+                    <div>
+                        <input 
+                            type = "text" 
+                            value = {search}
+                            onChange={handleSearch}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                        type="checkbox" 
+                        checked={afficherHorsStock}
+                        onChange={handleCheckBox}
+                            />
+                    </div>
+                </div>
+
+             
+                <Fruit products={products} afficherHorsStock={afficherHorsStock} search={search}/>
+                <Legume products={products} afficherHorsStock={afficherHorsStock} search={search}/>
             </div>
            <div className="border-b mb-5">
                 <h2>Exemple 2</h2>
@@ -61,15 +90,14 @@ function Exercices () {
 
             <div>
                 <h2>Exemple 3</h2>
-                <FruitsEtLegumes products={fruits}/>
-                <FruitsEtLegumes products={legumes}/>
+                <FruitsEtLegumes products={fruits} afficherHorsStock={afficherHorsStock} search={search}/>
+                <FruitsEtLegumes products={legumes} afficherHorsStock={afficherHorsStock} search={search}/>
             </div>
-            
         </>
     )
 }
 
-function Fruit ({products}) {
+function Fruit ({products, afficherHorsStock, search}) {
     return(
         <>
             <h2>Tableau des fruits: </h2>
@@ -86,7 +114,15 @@ function Fruit ({products}) {
                     { products
                         .filter( (product) => 
                             product.category === 'Fruits'
-                        ) 
+                            && (afficherHorsStock ? true : product.number > 0)
+                            && (product.name.toLowerCase().includes(search.toLowerCase()))
+
+                            // // Si case à coché = true 
+                            // product.category === 'Fruits' && (true)
+
+                            //  // Si case à coché = false
+                            // product.category === 'Fruits' && (product.number > 0)
+                        )
                         .map((product, item) => 
                             <tr key={item}>
                                 <td>{product.name}</td>
@@ -94,14 +130,14 @@ function Fruit ({products}) {
                                 <td>{product.number}</td>
                             </tr>
                         )
-                        }
+                    }
                 </tbody>
             </table>
         </>
     )
 }
 
-function Legume ({products}) {
+function Legume ({products, afficherHorsStock,  search}) {
     return(
         <>
             <h2>Tableau des légumes: </h2>
@@ -118,6 +154,8 @@ function Legume ({products}) {
                     { products
                         .filter( (product) => 
                             product.category === 'Vegetables'
+                            && (afficherHorsStock ? true : product.number > 0)
+                            && (product.name.toLowerCase().includes(search.toLowerCase()))
                         ) 
                         .map((product, item) => 
                             <tr key={item}>
@@ -153,7 +191,7 @@ function LegumeListe ({products}) {
 }
 
 // // Renverra la fonction 
-function FruitsEtLegumes ({products}) {
+function FruitsEtLegumes ({products, afficherHorsStock, search}) {
     return (
         <>
              <table className="table table-zebra">
@@ -165,14 +203,18 @@ function FruitsEtLegumes ({products}) {
                     </tr>
                 </thead>
                 <tbody>
-                    { products.map((product, item) => 
+                    { products
+                    .filter( product => 
+                        (afficherHorsStock ? true : product.number > 0)
+                        && (product.name.toLowerCase().includes(search.toLowerCase())))
+                    .map((product, item) => 
                         <tr key={item}>
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td>{product.number}</td>
                         </tr>
                         )
-                        }
+                    }
                 </tbody>
             </table>
         </>

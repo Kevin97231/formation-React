@@ -26,6 +26,12 @@ function NavBar() {
               <li>
                 <a href="/flux">Les flux</a>
               </li>
+              <li>
+                <a href="/use-effect">hook useEffect</a>
+              </li>
+              <li>
+                <a href="/use-memo">hook useMemo</a>
+              </li>
             </ul>
           </div>
         </div>
