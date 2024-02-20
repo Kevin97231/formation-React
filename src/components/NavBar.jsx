@@ -20,6 +20,12 @@ function NavBar() {
               <li>
                 <a href="/exercices">Exercices</a>
               </li>
+              <li>
+                <a href="/formulaire">Formulaire</a>
+              </li>
+              <li>
+                <a href="/flux">Les flux</a>
+              </li>
             </ul>
           </div>
         </div>

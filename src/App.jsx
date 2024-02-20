@@ -6,6 +6,8 @@ import Theorie from './components/pages/Theorie.jsx'
 import NavBar from './components/NavBar.jsx'
 import HookUseState from './components/pages/HookUseState.jsx'
 import Exercices from './components/pages/Exercices.jsx'
+import Formulaire from './components/pages/Formulaire.jsx'
+import Flux from './components/pages/Flux.jsx'
 
 function App() {
 
@@ -19,11 +21,11 @@ function App() {
           <Route path="/theorie" element={<Theorie/>}/>
           <Route path="/hook-use-state" element={<HookUseState/>}/>
           <Route path="/exercices" element={<Exercices/>}/>
+          <Route path="/formulaire" element={<Formulaire/>}/>
+          <Route path="/flux" element={<Flux/>}/>
         </Routes>
       </Router>
-    </div>
-    
-    
+    </div>   
   )
 }
 

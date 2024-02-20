@@ -4,7 +4,6 @@ function Exercices () {
         <>
             <h1>Exercices</h1>
 
-
             Nous avons une liste de produits: 
             <pre>
                 {/* number correspond à la quantité */}
@@ -20,18 +19,18 @@ function Exercices () {
                 `}
             </pre>
             <pre>
-            {`
-                1)  Créer un composant parent et deux composants enfants
+                {`
+                    1)  Créer un composant parent et deux composants enfants
 
-                    Les deux composants enfant afficheront un tableau contenant les colonnes 'nom', 'prix' et 'quantité'. Le premier enfant affichera UNIQUEMENT les fruits,
-                    le second uniquement les légumes
+                        Les deux composants enfant afficheront un tableau contenant les colonnes 'nom', 'prix' et 'quantité'. Le premier enfant affichera UNIQUEMENT les fruits,
+                        le second uniquement les légumes
 
-                    (Utiliser la fonction filter() pour trier)
+                        (Utiliser la fonction filter() pour trier)
 
-                2)  Ajouter une case à cocher permettant de masquer / afficher les produits qui ne sont pas en stock (s'aider de l'attribut 'number' représentant la quantité)
+                    2)  Ajouter une case à cocher permettant de masquer / afficher les produits qui ne sont pas en stock (s'aider de l'attribut 'number' représentant la quantité)
 
-                3)  Ajouter une barre de recherche permettant de faire une recherche sur le 'name' sur l'ensemble du tableau
-            `}
+                    3)  Ajouter une barre de recherche permettant de faire une recherche sur le 'name' sur l'ensemble du tableau
+                `}
             </pre>
         </>
     )
