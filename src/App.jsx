@@ -10,6 +10,7 @@ import Formulaire from './components/pages/Formulaire.jsx'
 import Flux from './components/pages/Flux.jsx'
 import HookUseEffect from './components/pages/HookUseEffect.jsx'
 import HookUseMemo from './components/pages/HookUseMemo.jsx'
+import RequetesApi from './components/pages/RequetesApi.jsx'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/flux" element={<Flux/>}/>
           <Route path="/use-effect" element={<HookUseEffect/>}/>
           <Route path="/use-memo" element={<HookUseMemo/>}/>
+          <Route path="/requete-api" element={<RequetesApi/>}/>
         </Routes>
       </Router>
     </div>   

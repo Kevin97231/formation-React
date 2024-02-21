@@ -32,6 +32,9 @@ function NavBar() {
               <li>
                 <a href="/use-memo">hook useMemo</a>
               </li>
+              <li>
+                <a href="/requete-api">Requête API</a>
+              </li>
             </ul>
           </div>
         </div>
