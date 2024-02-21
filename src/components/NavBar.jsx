@@ -35,6 +35,9 @@ function NavBar() {
               <li>
                 <a href="/requete-api">Requête API</a>
               </li>
+              <li>
+                <a href="/requete-api-service">Api avec Service</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -2,8 +2,10 @@ import axios from "axios"
 
 class ApiService {
 
-    constructor(baseUrl) {
-        this.api = axios.create({baseUrl});
+    constructor(baseURL) {
+        this.api = axios.create({
+            baseURL
+        });
     }
 
     // Méthode GET

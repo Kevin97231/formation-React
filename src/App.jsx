@@ -11,6 +11,7 @@ import Flux from './components/pages/Flux.jsx'
 import HookUseEffect from './components/pages/HookUseEffect.jsx'
 import HookUseMemo from './components/pages/HookUseMemo.jsx'
 import RequetesApi from './components/pages/RequetesApi.jsx'
+import ApiWithService from './components/pages/ApiWithService.jsx'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/use-effect" element={<HookUseEffect/>}/>
           <Route path="/use-memo" element={<HookUseMemo/>}/>
           <Route path="/requete-api" element={<RequetesApi/>}/>
+          <Route path="/requete-api-service" element={<ApiWithService/>}/>
         </Routes>
       </Router>
     </div>   
