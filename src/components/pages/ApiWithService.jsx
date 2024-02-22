@@ -119,7 +119,6 @@ function ApiWithService () {
                 </table>
             </div>
 
-
             {/*  CI-dessous, le pop-up. Avec React-modal, tout le pop-up est dans les balise 
             <ReactModal>
                  CONTENU DE MON POP-UP ICI               

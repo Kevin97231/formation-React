@@ -36,32 +36,11 @@
       "id": "5"
     },
     {
-      "category": "Vegetables",
-      "price": "$1",
-      "number": 6,
-      "name": "Zucchini",
-      "id": "6"
-    },
-    {
       "id": "8f1b",
       "category": "Fruits",
       "name": "Coco",
       "number": "3",
       "price": "12"
-    },
-    {
-      "id": "a386",
-      "category": "Fruits",
-      "name": "Test3",
-      "number": "20",
-      "price": "156"
-    },
-    {
-      "id": "8e50",
-      "category": "Vegetables",
-      "name": "TestPost2",
-      "number": "6",
-      "price": "1.32"
     }
   ]
 }
